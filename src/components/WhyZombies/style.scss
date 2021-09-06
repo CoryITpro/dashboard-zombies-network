@@ -1,0 +1,78 @@
+@import "../../styles/variables.scss";
+
+.whyzombies {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+
+  &-gradient-bg {
+    position: absolute;
+    right: calc(-25vw);
+    top: calc(-25vw);
+    width: calc(60vw);
+    height: calc(60vw);
+    background-image: radial-gradient(
+      rgba($color: $Green-white, $alpha: 0.2) 10%,
+      rgba($color: $Green-white, $alpha: 0) 70%
+    );
+  }
+
+  & > img {
+    position: absolute;
+    width: 100%;
+    top: calc(35vw);
+    z-index: 0;
+  }
+
+  &-title {
+    font-size: 100px;
+    align-items: center;
+    font-family: "sofia-pro";
+    font-weight: 800;
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgba($color: $Green-light, $alpha: 0.2);
+
+    & > span {
+      margin-top: -70px;
+      font-size: 96px;
+      -webkit-text-stroke-width: 0;
+      color: $Green-light;
+      font-family: "burnaby-stencil";
+    }
+  }
+
+  &-comment {
+    width: 100%;
+    gap: 36px;
+    padding: 0 100px;
+    margin-top: 80px;
+
+    & > img {
+      margin-left: -180px;
+      width: 65%;
+    }
+
+    &-right {
+      width: 100%;
+      gap: 24px;
+      font-family: "sofia-pro";
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+
+      & > span {
+        width: 100%;
+        font-size: 30px;
+        color: $White;
+      }
+
+      & > p {
+        width: 100%;
+        color: $Green-dark;
+        font-size: 24px;
+      }
+    }
+  }
+}
