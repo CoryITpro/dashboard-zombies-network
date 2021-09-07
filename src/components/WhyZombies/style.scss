@@ -25,24 +25,6 @@
     z-index: 0;
   }
 
-  &-title {
-    font-size: 100px;
-    align-items: center;
-    font-family: "sofia-pro";
-    font-weight: 800;
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgba($color: $Green-light, $alpha: 0.2);
-
-    & > span {
-      margin-top: -70px;
-      font-size: 96px;
-      -webkit-text-stroke-width: 0;
-      color: $Green-light;
-      font-family: "burnaby-stencil";
-    }
-  }
-
   &-comment {
     width: 100%;
     gap: 36px;

@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.footer {
+  padding: 0 100px;
+  color: $Green-dark;
+  font-size: 30px;
+  font-family: "sofia-pro";
+  font-weight: 400;
+
+  & > div {
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid $Green-dark;
+    padding: 40px 0;
+  }
+}

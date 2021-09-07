@@ -3,7 +3,10 @@ import "./style.scss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCopy } from "@fortawesome/free-solid-svg-icons"
 import { CAPS } from "configurations"
-import HERO_BG from "resources/hero-banner.png"
+
+import { BACKGROUNDS } from "constants/index.js"
+
+const { HeroImages } = BACKGROUNDS
 
 const Hero = ({ percentage = 75.2 }) => (
   <>
@@ -14,12 +17,13 @@ const Hero = ({ percentage = 75.2 }) => (
         <div className="hero-title-third">Live On The Binance Smart Chain</div>
       </div>
       <div className="hero-contract flex flex-column">
-        <img src={HERO_BG} alt="hero background" />
+        <img src={HeroImages.background} alt="hero background" />
         <div className="hero-contract-address flex flex-column">
           <span>Contract Address:</span>
           <input
             type="text"
-            placeholder="0x9D173E6c594f479B4d47001F8E6A95A7aDDa42bC"
+            value="0x9D173E6c594f479B4d47001F8E6A95A7aDDa42bC"
+            readOnly
           />
           <FontAwesomeIcon icon={faCopy} />
           <div className="hero-contract-buttons flex">

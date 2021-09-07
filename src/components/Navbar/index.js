@@ -4,8 +4,9 @@ import { useHistory } from "react-router-dom"
 
 import { HashLink as Link } from "react-router-hash-link"
 import { CONTACTS } from "configurations"
-import LOGO from "resources/logo.png"
 import { ROUTES, SECTIONS } from "configurations"
+
+import LOGO from "resources/logo.png"
 
 const Navbar = () => {
   const history = useHistory()
