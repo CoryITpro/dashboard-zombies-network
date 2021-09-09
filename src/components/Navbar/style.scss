@@ -3,13 +3,13 @@
 .navbar {
   width: 100%;
   padding: 30px 100px 0 100px;
-  gap: 64px;
   justify-content: space-between;
   background-color: rgba($color: $Green-white, $alpha: 0.1);
 
   & > img {
     height: 128px;
     cursor: pointer;
+    z-index: 1;
   }
 
   &-right {
@@ -63,6 +63,182 @@
 
       &:active {
         box-shadow: 0 0 64px 0 rgba($color: $Green-light, $alpha: 0.2);
+      }
+    }
+
+    &-collapse {
+      display: none;
+      font-size: 16px;
+      border-radius: 10px;
+      color: $Green-light;
+      padding: 12px 18px;
+      cursor: pointer;
+    }
+  }
+
+  &-collapse-menu {
+    position: absolute;
+    width: 100%;
+    background-color: $Black-green;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+    height: 0px;
+    transition: 0.5s;
+    overflow: hidden;
+
+    &-collapsed {
+      height: 300px;
+    }
+
+    & > a {
+      width: 100%;
+      text-align: center;
+      font-family: "burnaby-stencil";
+      white-space: nowrap;
+      font-size: 20px;
+      text-decoration: none;
+      color: $White;
+      padding: 8px 0;
+
+      &:hover {
+        color: $Green-light;
+        background-color: $Black-green;
+      }
+
+      &:active {
+        color: $Green-dark;
+      }
+    }
+  }
+}
+
+@keyframes expanding {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: auto;
+  }
+}
+
+@media (max-width: 1700px) {
+  .navbar {
+    padding: 30px 50px 0 50px;
+    justify-content: space-between;
+
+    & > img {
+      height: 104px;
+    }
+
+    &-contacts {
+      gap: 36px;
+      font-size: 16px;
+    }
+
+    &-buttons {
+      gap: 36px;
+
+      & > a {
+        font-size: 24px;
+      }
+
+      &-enterapp {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 10px 30px 0 30px;
+    justify-content: space-between;
+
+    & > img {
+      height: 96px;
+    }
+
+    &-contacts {
+      gap: 24px;
+      font-size: 14px;
+    }
+
+    &-buttons {
+      gap: 24px;
+
+      & > a {
+        font-size: 22px;
+      }
+
+      &-enterapp {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 20px 0 20px;
+    justify-content: space-between;
+
+    & > img {
+      height: 80px;
+    }
+
+    &-contacts {
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    &-buttons {
+      gap: 24px;
+
+      & > a {
+        font-size: 20px;
+      }
+
+      &-enterapp {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    &-buttons {
+      & > a {
+        display: none;
+      }
+
+      &-collapse {
+        display: block !important;
+        font-size: 16px;
+        margin-left: -16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    &-contacts {
+      gap: 24px;
+      font-size: 12px;
+    }
+
+    &-buttons {
+      & > a {
+        display: none;
+      }
+
+      &-collapse {
+        display: block !important;
+        font-size: 16px;
+        margin-left: -16px;
       }
     }
   }

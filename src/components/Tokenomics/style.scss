@@ -6,12 +6,59 @@
   align-items: center;
 
   &-wrapper {
+    position: relative;
     width: 100%;
     justify-content: center;
     margin: 150px 0;
 
     & > img {
+      position: absolute;
       width: 45%;
+      z-index: 1;
+    }
+
+    &-comments {
+      padding: calc(1vw) 0;
+      width: 100%;
+      height: calc((100vw - 200px) * 0.45 * 0.9);
+      z-index: 2;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &-first,
+  &-last {
+    gap: calc(35vw);
+  }
+
+  &-middle {
+    gap: calc(45vw);
+    padding-right: 100px;
+  }
+
+  &-item {
+    &-title {
+      white-space: nowrap;
+      color: $White;
+      font-size: 48px;
+      font-family: "burnaby-stencil";
+    }
+
+    &-content {
+      color: $Green-dark;
+      font-size: 24;
+      font-family: "sofia-pro";
+      text-align: start;
+      width: 200px;
+    }
+
+    &:not(:last-child) {
+      align-items: flex-end;
+
+      & > div:nth-child(2) {
+        text-align: end !important;
+      }
     }
   }
 

@@ -22,7 +22,7 @@ const Hero = ({ percentage = 75.2 }) => (
           <span>Contract Address:</span>
           <input
             type="text"
-            value="0x9D173E6c594f479B4d47001F8E6A95A7aDDa42bC"
+            value="0x0be77285f48208c0af60cd91fe61ebfa668b64b7"
             readOnly
           />
           <FontAwesomeIcon icon={faCopy} />
