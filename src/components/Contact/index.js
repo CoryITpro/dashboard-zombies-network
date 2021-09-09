@@ -7,7 +7,7 @@ const { ContactImages } = BACKGROUNDS
 
 const generateSocials = () =>
   SocialCommunities.map((item, index) => (
-    <a key={index} href={item.link} className="flex">
+    <a key={index} href={item.link} target="_blank" className="flex">
       <FontAwesomeIcon icon={item.icon} />
     </a>
   ))

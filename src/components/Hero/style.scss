@@ -91,9 +91,27 @@
         border: 1px solid transparent;
         border-radius: 10px;
         cursor: pointer;
+        box-shadow: 0 0 64px 0 rgba($color: $White, $alpha: 0.3);
+
+        &:hover {
+          box-shadow: 0 0 64px 0 rgba($color: $White, $alpha: 0.4);
+        }
+
+        &:active {
+          box-shadow: 0 0 64px 0 rgba($color: $White, $alpha: 0.2);
+        }
 
         &:not(:last-child) {
           background-color: $Green-light;
+          box-shadow: 0 0 64px 0 rgba($color: $Green-light, $alpha: 0.3);
+
+          &:hover {
+            box-shadow: 0 0 64px 0 rgba($color: $Green-light, $alpha: 0.4);
+          }
+
+          &:active {
+            box-shadow: 0 0 64px 0 rgba($color: $Green-light, $alpha: 0.2);
+          }
         }
       }
     }
@@ -104,6 +122,7 @@
   width: 100%;
   padding: 0 100px;
   margin-bottom: 100px;
+  z-index: 2;
 
   &-wrapper {
     height: 420px;
@@ -189,6 +208,7 @@
         color: $White;
         font-size: 30px;
         font-family: "sofia-pro";
+        z-index: 2;
       }
 
       & > button {
@@ -198,6 +218,16 @@
         border: 1px solid transparent;
         font-size: 26px;
         font-family: "burnaby-stencil";
+        z-index: 2;
+        box-shadow: 0 0 64px 0 rgba($color: $White, $alpha: 0.3);
+
+        &:hover {
+          box-shadow: 0 0 64px 0 rgba($color: $Black, $alpha: 0.3);
+        }
+
+        &:active {
+          box-shadow: 0 0 64px 0 rgba($color: $Green-light, $alpha: 0.3);
+        }
       }
     }
   }

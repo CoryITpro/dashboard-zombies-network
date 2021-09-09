@@ -9,7 +9,9 @@
     position: relative;
     margin-top: 100px;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
 
     &-tomb {
       position: relative;

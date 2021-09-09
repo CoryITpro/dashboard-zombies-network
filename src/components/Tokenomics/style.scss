@@ -11,7 +11,12 @@
     margin: 150px 0;
 
     & > img {
-      width: 50%;
+      width: 45%;
     }
+  }
+
+  & > img {
+    width: calc(100% + 60px);
+    margin: 0 -30px;
   }
 }

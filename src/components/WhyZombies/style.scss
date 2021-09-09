@@ -16,6 +16,7 @@
       rgba($color: $Green-white, $alpha: 0.2) 10%,
       rgba($color: $Green-white, $alpha: 0) 70%
     );
+    z-index: 1;
   }
 
   & > img {

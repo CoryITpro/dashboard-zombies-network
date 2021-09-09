@@ -1,0 +1,93 @@
+@import "../../styles/variables.scss";
+
+.roadmap {
+  width: 100%;
+  padding: 0 100px 150px 100px;
+  align-items: center;
+
+  & > span {
+    color: $Green-light;
+    font-size: 78px;
+    padding-bottom: 100px;
+    font-family: "burnaby-stencil";
+  }
+
+  &-road {
+    position: relative;
+    width: 20px;
+    background-color: $Green-dark;
+    align-items: center;
+
+    & > div {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: $Green-light;
+      top: -20px;
+    }
+  }
+
+  &-item {
+    width: 100%;
+    justify-content: center;
+    gap: 100px;
+
+    &-image {
+      width: 40%;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 150px;
+    }
+
+    &-phase {
+      width: 40%;
+      height: min-content;
+      border-radius: 16px;
+      background-color: $Black-gray;
+      padding: 60px;
+      font-family: "sofia-pro";
+
+      &-title {
+        color: $White;
+        font-size: 36px;
+        font-weight: bold;
+        padding-bottom: 30px;
+      }
+
+      &-content {
+        width: 100%;
+
+        &-steps {
+          width: 100%;
+          align-items: center;
+          padding: 8px 0;
+
+          & > div:not(:last-child) {
+            width: 48px;
+
+            & > svg {
+              color: $Red-light;
+              font-size: 24px;
+              margin-right: 16px;
+              margin-top: 6px;
+            }
+          }
+
+          &-title {
+            color: $Green-dark;
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.completed {
+  & > div:not(:last-child) {
+    & > svg {
+      color: $Green-light;
+    }
+  }
+}

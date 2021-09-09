@@ -11,6 +11,10 @@ import TOKENOMICS_BG from "resources/Backgrounds/tokenomics-bg.png"
 import TOKENOMICS_ARTWORK from "resources/Backgrounds/artwork-bg.png"
 import CONTACT_BG from "resources/Backgrounds/contact-bg.png"
 
+import PHASE_1 from "resources/Roadmap/phase-1.png"
+import PHASE_2 from "resources/Roadmap/phase-2.png"
+import PHASE_3 from "resources/Roadmap/phase-3.png"
+
 import {
   faYoutube,
   faGithub,
@@ -167,4 +171,52 @@ export const SocialCommunities = [
     icon: faFacebook,
     link: "https://www.facebook.com",
   },
+]
+
+export const PHASES = [
+  [
+    PHASE_1,
+    {
+      title: "Phase 1",
+      content: [
+        { title: "Graphic Designs Characters & Marketplace", status: true },
+        { title: "Launch Social + Website", status: true },
+        { title: "Audit Contract", status: false },
+        { title: "Marketing / Pre-Sale On UniCrypt", status: false },
+        { title: "Public Launch On PancakeSwap", status: false },
+        { title: "Public Launch NFT Battle", status: false },
+        { title: "Public Launch NFT Marketplace", status: false },
+        { title: "Coingecko, Coinmarketcap Listing", status: false },
+      ],
+    },
+  ],
+  [
+    PHASE_2,
+    {
+      title: "Phase 2",
+      content: [
+        { title: "CEX Listing", status: false },
+        { title: "Public Launch Against Yaki Bosses", status: false },
+        { title: "Public Launch NFT Farming", status: false },
+        { title: "Influencer Marketing", status: false },
+        { title: "Release More ZOAN NFT Characters", status: false },
+        { title: "ZOMB Training Alpha Version", status: false },
+        { title: "ZOMB’s Item", status: false },
+        { title: "Expanding Team", status: false },
+      ],
+    },
+  ],
+  [
+    PHASE_3,
+    {
+      title: "Phase 3",
+      content: [
+        { title: "Game Studio/Partnerships Expanded", status: false },
+        { title: "ZOMB Training Beta - Web Version", status: false },
+        { title: "More Exchanges", status: false },
+        { title: "ZOMB Dapp Mobile Game (IOS, Android)", status: false },
+        { title: "Zombies Global Tournament", status: false },
+      ],
+    },
+  ],
 ]

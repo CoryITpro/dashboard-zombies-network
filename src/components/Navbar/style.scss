@@ -56,6 +56,14 @@
       background-color: $Green-light;
       box-shadow: 0 0 64px 0 rgba($color: $Green-light, $alpha: 0.3);
       cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 0 64px 0 rgba($color: $Green-light, $alpha: 0.4);
+      }
+
+      &:active {
+        box-shadow: 0 0 64px 0 rgba($color: $Green-light, $alpha: 0.2);
+      }
     }
   }
 }
