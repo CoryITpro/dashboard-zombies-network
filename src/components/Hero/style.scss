@@ -202,6 +202,7 @@
     &-buy {
       width: 80%;
       justify-content: space-between;
+      align-items: center;
       margin-top: 60px;
 
       & > span {
@@ -228,6 +229,251 @@
         &:active {
           box-shadow: 0 0 64px 0 rgba($color: $Green-light, $alpha: 0.3);
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  .hero {
+    &-title {
+      &-first,
+      &-third {
+        font-size: 52px;
+      }
+
+      &-second {
+        font-size: 88px;
+      }
+    }
+  }
+
+  .presale {
+    &-progress-buy {
+      & > span {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    &-title {
+      &-first,
+      &-third {
+        font-size: 48px;
+      }
+
+      &-second {
+        font-size: 72px;
+      }
+    }
+  }
+
+  .presale {
+    padding: 0 60px;
+
+    &-wrapper {
+      height: 380px;
+    }
+
+    &-timer {
+      & > span {
+        font-size: 24px;
+      }
+
+      &-ticker-item {
+        & > span {
+          font-size: 48px;
+        }
+
+        & > p {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &-progress {
+      &-indicator {
+        & > span {
+          font-size: 18px;
+        }
+      }
+
+      &-bar {
+        margin-top: 20px;
+      }
+
+      &-buy {
+        margin-top: 20px;
+
+        & > span {
+          font-size: 18px;
+        }
+
+        & > button {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    &-title {
+      &-first,
+      &-third {
+        font-size: 40px;
+      }
+
+      &-second {
+        font-size: 64px;
+      }
+    }
+  }
+
+  .presale {
+    &-wrapper {
+      padding: 32px 0;
+      height: auto;
+      flex-direction: column !important;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    &-title {
+      &-first {
+        font-size: 32px;
+        margin-bottom: -10px;
+      }
+
+      &-second {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-contract {
+      &-address {
+        width: 560px;
+
+        & > input {
+          font-size: 24px;
+        }
+
+        & > svg {
+          font-size: 20px;
+        }
+      }
+
+      &-buttons {
+        & > button {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .presale {
+    padding: 0 30px;
+
+    &-wrapper {
+      padding: 24px 0;
+    }
+
+    &-timer {
+      & > span {
+        font-size: 20px;
+      }
+
+      &-ticker-item {
+        & > span {
+          font-size: 36px;
+        }
+
+        & > p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-progress {
+      &-indicator {
+        & > span {
+          font-size: 16px;
+        }
+      }
+
+      &-bar {
+        margin-top: 16px;
+      }
+
+      &-buy {
+        margin-top: 16px;
+
+        & > span {
+          font-size: 16px;
+        }
+
+        & > button {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    &-title {
+      &-first,
+      &-third {
+        font-size: 28px;
+        margin-bottom: -10px;
+      }
+
+      &-second {
+        font-size: 38px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &-contract {
+      &-address {
+        width: 90%;
+
+        & > input {
+          font-size: 16px;
+        }
+
+        & > svg {
+          font-size: 16px;
+          top: 80px;
+        }
+      }
+
+      &-buttons {
+        & > button {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .presale {
+    padding: 80px 10px;
+
+    &-wrapper {
+      padding: 24px 0;
+    }
+
+    &-timer {
+      & > span {
+        font-size: 18px;
       }
     }
   }

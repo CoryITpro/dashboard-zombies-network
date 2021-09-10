@@ -55,3 +55,58 @@ button {
     font-family: "burnaby-stencil";
   }
 }
+
+@media (max-width: 1700px) {
+  .subtitle {
+    font-size: 88px;
+
+    & > span {
+      margin-top: -60px;
+      font-size: 80px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .subtitle {
+    font-size: 72px;
+
+    & > span {
+      margin-top: -55px;
+      font-size: 64px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .subtitle {
+    font-size: 64px;
+
+    & > span {
+      margin-top: -40px;
+      font-size: 56px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .subtitle {
+    font-size: 48px;
+
+    & > span {
+      margin-top: -35px;
+      font-size: 36px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .subtitle {
+    font-size: 42px;
+
+    & > span {
+      margin-top: -30px;
+      font-size: 32px;
+    }
+  }
+}

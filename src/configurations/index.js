@@ -8,7 +8,7 @@ export const SECTIONS = {
   Tokenomics: "tokenomics",
   Roadmap: "roadmap",
   FAQs: "faqs",
-  Community: "community",
+  Community: "contact",
 }
 
 export const CONTACTS = {

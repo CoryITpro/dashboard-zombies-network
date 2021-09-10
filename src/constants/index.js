@@ -8,8 +8,8 @@ import WHYZOMBIES_BG from "resources/Backgrounds/whyzombies-bg.png"
 import WHYZOMBIES_HAND from "resources/whyzombies-hand.png"
 import TOMB_BG from "resources/Backgrounds/step-bg.svg"
 import TOKENOMICS_BG from "resources/Backgrounds/tokenomics-bg.png"
-import TOKENOMICS_ARTWORK from "resources/Backgrounds/artwork-bg.png"
-import CONTACT_BG from "resources/Backgrounds/contact-bg.png"
+import TOKENOMICS_ARTWORK from "resources/Backgrounds/artwork.gif"
+import CONTACT_BG from "resources/Backgrounds/community.gif"
 
 import PHASE_1 from "resources/Roadmap/phase-1.png"
 import PHASE_2 from "resources/Roadmap/phase-2.png"
@@ -134,8 +134,16 @@ export const FAQItems = [
     answer:
       "First And Foremost, We Are Timelocked, So New Tokens Cannot Be Minted. All Tokens Originating From Wallet 0x00000000.. Are Obtained As A Prize When You Defeat A Monster. The Second Point Is That, As Previously Said, The Total Quantity Of Tokens In Fight Monster Is 140 Million. Tokens Are Distributed At Initial: 570 Million Tokens. 570 Million Tokens + 140 Million Tokens = 710 Million Tokens. So What Happens If This Quantity Of Tokens Is Exceeded? We Have A Very Clear Plan For This; So Far, More Than 20,000 NFTs Have Been Sold, Resulting In A Total Of 260 Million Tokens Gathered From The Community. This Tokens Will Continue To Be Used For Project Development (Fight Monsters, Bosses, Training, Farming, …) Our Max Total Supply Is 1 Billion.",
   },
-  { question: "Why The assets Of Zombies Game is similar to others?" },
-  { question: "Dev are Doxxing or Not?" },
+  {
+    question: "Why The assets Of Zombies Game is similar to others?",
+    answer:
+      "First And Foremost, We Are Timelocked, So New Tokens Cannot Be Minted. All Tokens Originating From Wallet 0x00000000.. Are Obtained As A Prize When You Defeat A Monster. The Second Point Is That, As Previously Said, The Total Quantity Of Tokens In Fight Monster Is 140 Million. Tokens Are Distributed At Initial: 570 Million Tokens. 570 Million Tokens + 140 Million Tokens = 710 Million Tokens. So What Happens If This Quantity Of Tokens Is Exceeded? We Have A Very Clear Plan For This; So Far, More Than 20,000 NFTs Have Been Sold, Resulting In A Total Of 260 Million Tokens Gathered From The Community. This Tokens Will Continue To Be Used For Project Development (Fight Monsters, Bosses, Training, Farming, …) Our Max Total Supply Is 1 Billion.",
+  },
+  {
+    question: "Dev are Doxxing or Not?",
+    answer:
+      "First And Foremost, We Are Timelocked, So New Tokens Cannot Be Minted. All Tokens Originating From Wallet 0x00000000.. Are Obtained As A Prize When You Defeat A Monster. The Second Point Is That, As Previously Said, The Total Quantity Of Tokens In Fight Monster Is 140 Million. Tokens Are Distributed At Initial: 570 Million Tokens. 570 Million Tokens + 140 Million Tokens = 710 Million Tokens. So What Happens If This Quantity Of Tokens Is Exceeded? We Have A Very Clear Plan For This; So Far, More Than 20,000 NFTs Have Been Sold, Resulting In A Total Of 260 Million Tokens Gathered From The Community. This Tokens Will Continue To Be Used For Project Development (Fight Monsters, Bosses, Training, Farming, …) Our Max Total Supply Is 1 Billion.",
+  },
 ]
 
 export const SocialCommunities = [

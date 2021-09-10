@@ -15,7 +15,7 @@ const generateSocials = () =>
 const Contact = () => (
   <>
     <div className="contact flex">
-      <div className="contact-image flex">
+      <div className="contact-image">
         <img src={ContactImages.background} alt="contacts" />
       </div>
       <div className="contact-wrapper flex flex-column">

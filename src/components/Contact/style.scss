@@ -70,6 +70,7 @@
   width: 100%;
   padding: 0 100px 150px 100px;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 24px;
 
   & > a {
@@ -84,5 +85,206 @@
     & > svg {
       font-size: 36px;
     }
+  }
+}
+
+@media (max-width: 1700px) {
+  .contact {
+    align-items: center;
+
+    &-image {
+      max-width: 40%;
+
+      & > img {
+        width: 100%;
+      }
+    }
+
+    &-wrapper {
+      & .subtitle {
+        font-size: 88px;
+
+        & > span {
+          margin-top: -60px;
+          font-size: 80px;
+        }
+      }
+
+      & > div {
+        align-items: center;
+
+        & > button {
+          font-size: 24px !important;
+        }
+
+        & > p {
+          font-size: 26px !important;
+        }
+      }
+    }
+
+    &-comment {
+      font-size: 28px;
+    }
+  }
+
+  .socials {
+    padding: 0 100px 120px 100px;
+
+    & > a {
+      width: 70px;
+      height: 70px;
+
+      & > svg {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    padding: 0 60px 120px 60px;
+    flex-direction: column !important;
+
+    &-image {
+      max-width: 400px;
+
+      & > img {
+        width: 100%;
+      }
+    }
+
+    &-wrapper {
+      & .subtitle {
+        font-size: 72px;
+
+        & > span {
+          margin-top: -55px;
+          font-size: 64px;
+        }
+      }
+
+      & > div {
+        & > button {
+          font-size: 20px !important;
+        }
+
+        & > p {
+          font-size: 22px !important;
+        }
+      }
+    }
+
+    &-comment {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  .socials {
+    padding: 0 60px 90px 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    padding: 0 30px 90px 30px;
+
+    &-wrapper {
+      & .subtitle {
+        font-size: 64px;
+
+        & > span {
+          margin-top: -40px;
+          font-size: 56px;
+        }
+      }
+
+      & > div {
+        & > button {
+          font-size: 18px !important;
+        }
+
+        & > p {
+          font-size: 20px !important;
+        }
+      }
+    }
+
+    &-comment {
+      font-size: 20px;
+    }
+  }
+
+  .socials {
+    padding: 0 30px 60px 30px;
+
+    & > a {
+      width: 60px;
+      height: 60px;
+
+      & > svg {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .contact {
+    &-wrapper {
+      & .subtitle {
+        font-size: 48px;
+
+        & > span {
+          margin-top: -35px;
+          font-size: 36px;
+        }
+      }
+
+      & > div {
+        & > button {
+          font-size: 16px !important;
+        }
+
+        & > p {
+          font-size: 18px !important;
+        }
+      }
+    }
+
+    &-comment {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding: 0 10px 60px 10px;
+
+    &-wrapper {
+      & .subtitle {
+        font-size: 42px;
+
+        & > span {
+          margin-top: -30px;
+          font-size: 32px;
+        }
+      }
+
+      & > div {
+        align-items: center;
+      }
+    }
+
+    &-comment {
+      font-size: 14x;
+    }
+  }
+
+  .socials {
+    padding: 0 10px 40px 10px;
   }
 }

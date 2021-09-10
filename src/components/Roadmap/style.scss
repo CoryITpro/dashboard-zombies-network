@@ -31,7 +31,7 @@
   &-item {
     width: 100%;
     justify-content: center;
-    gap: 100px;
+    gap: 80px;
 
     &-image {
       width: 40%;
@@ -88,6 +88,138 @@
   & > div:not(:last-child) {
     & > svg {
       color: $Green-light;
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  .roadmap {
+    & > span {
+      font-size: 70px;
+      padding-bottom: 90px;
+    }
+
+    &-item {
+      &-phase {
+        padding: 40px;
+
+        &-title {
+          font-size: 32px;
+        }
+
+        &-content {
+          &-steps {
+            & > div:not(:last-child) {
+              width: 36px;
+
+              & > svg {
+                font-size: 20px;
+              }
+            }
+
+            &-title {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .roadmap {
+    padding: 0 60px 110px 60px;
+
+    & > span {
+      font-size: 64px;
+      padding-bottom: 80px;
+    }
+
+    &-road {
+      width: 10px;
+
+      & > div {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &-item {
+      gap: 50px;
+
+      &-image {
+        padding-bottom: 100px;
+      }
+
+      &-phase {
+        padding: 30px;
+
+        &-title {
+          font-size: 28px;
+        }
+
+        &-content {
+          &-steps {
+            & > div:not(:last-child) {
+              & > svg {
+                font-size: 16px;
+              }
+            }
+
+            &-title {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .roadmap {
+    padding: 0 30px 90px 30px;
+
+    & > span {
+      font-size: 48px;
+      padding-bottom: 60px;
+    }
+
+    & > span {
+      width: 100%;
+      text-align: center;
+    }
+
+    &-road {
+      display: none !important;
+    }
+
+    &-item {
+      flex-direction: column !important;
+      align-items: center;
+      gap: 30px;
+
+      &:nth-child(3) {
+        flex-direction: column-reverse !important;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+
+      &-image {
+        padding-bottom: 0;
+        width: 100%;
+
+        & > img {
+          width: 60%;
+        }
+      }
+
+      &-phase {
+        width: 100%;
+      }
     }
   }
 }

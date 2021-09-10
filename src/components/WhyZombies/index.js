@@ -6,7 +6,7 @@ import { SubTitles, BACKGROUNDS } from "constants/index.js"
 const { WhyZombiesImages } = BACKGROUNDS
 
 const WhyZombies = () => (
-  <section id={SECTIONS.WhyZombies} className="whyzombies flex flex-column">
+  <section className="whyzombies flex flex-column">
     <div className="whyzombies-gradient-bg"></div>
     <img src={WhyZombiesImages.background} alt="background" />
     <div className="subtitle flex flex-column">

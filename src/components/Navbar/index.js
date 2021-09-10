@@ -3,7 +3,7 @@ import "./style.scss"
 import { useState } from "react"
 import { useHistory } from "react-router-dom"
 
-import { HashLink as Link } from "react-router-hash-link"
+import { Link } from "react-scroll"
 import { CONTACTS } from "configurations"
 import { ROUTES, SECTIONS } from "configurations"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -34,14 +34,72 @@ const Navbar = () => {
             <div className="navbar-contacts-address">{CONTACTS.address}</div>
           </div>
           <div className="navbar-buttons flex">
-            <Link to={`${ROUTES.Home}#${SECTIONS.WhyZombies}`}>
+            <Link
+              className="navbar-anchor-link"
+              activeClass="active"
+              to={SECTIONS.WhyZombies}
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
               Why Zombies
             </Link>
-            <Link to={`${ROUTES.Home}#${SECTIONS.Features}`}>Features</Link>
-            <Link to={`${ROUTES.Home}#${SECTIONS.Tokenomics}`}>Tokenomics</Link>
-            <Link to={`${ROUTES.Home}#${SECTIONS.Roadmap}`}>Roadmap</Link>
-            <Link to={`${ROUTES.Home}#${SECTIONS.FAQs}`}>Faq's</Link>
-            <Link to={`${ROUTES.Home}#${SECTIONS.Community}`}>Community</Link>
+            <Link
+              className="navbar-anchor-link"
+              activeClass="active"
+              to={SECTIONS.Features}
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Features
+            </Link>
+            <Link
+              className="navbar-anchor-link"
+              activeClass="active"
+              to={SECTIONS.Tokenomics}
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Tokenomics
+            </Link>
+            <Link
+              className="navbar-anchor-link"
+              activeClass="active"
+              to={SECTIONS.Roadmap}
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Roadmap
+            </Link>
+            <Link
+              className="navbar-anchor-link"
+              activeClass="active"
+              to={SECTIONS.FAQs}
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Faq's
+            </Link>
+            <Link
+              className="navbar-anchor-link"
+              activeClass="active"
+              to={SECTIONS.Community}
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              Community
+            </Link>
             <div className="navbar-buttons-enterapp">ENTER APP</div>
             <div className="navbar-buttons-collapse" onClick={onClickCollapse}>
               <FontAwesomeIcon icon={faBars} />
@@ -54,12 +112,72 @@ const Navbar = () => {
           collapsed && "navbar-collapse-menu-collapsed"
         }`}
       >
-        <Link to={`${ROUTES.Home}#${SECTIONS.WhyZombies}`}>Why Zombies</Link>
-        <Link to={`${ROUTES.Home}#${SECTIONS.Features}`}>Features</Link>
-        <Link to={`${ROUTES.Home}#${SECTIONS.Tokenomics}`}>Tokenomics</Link>
-        <Link to={`${ROUTES.Home}#${SECTIONS.Roadmap}`}>Roadmap</Link>
-        <Link to={`${ROUTES.Home}#${SECTIONS.FAQs}`}>Faq's</Link>
-        <Link to={`${ROUTES.Home}#${SECTIONS.Community}`}>Community</Link>
+        <Link
+          className="navbar-anchor-link"
+          activeClass="active"
+          to={SECTIONS.WhyZombies}
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+          Why Zombies
+        </Link>
+        <Link
+          className="navbar-anchor-link"
+          activeClass="active"
+          to={SECTIONS.Features}
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+          Features
+        </Link>
+        <Link
+          className="navbar-anchor-link"
+          activeClass="active"
+          to={SECTIONS.Tokenomics}
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+          Tokenomics
+        </Link>
+        <Link
+          className="navbar-anchor-link"
+          activeClass="active"
+          to={SECTIONS.Roadmap}
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+          Roadmap
+        </Link>
+        <Link
+          className="navbar-anchor-link"
+          activeClass="active"
+          to={SECTIONS.FAQs}
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+          Faq's
+        </Link>
+        <Link
+          className="navbar-anchor-link"
+          activeClass="active"
+          to={SECTIONS.Community}
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+        >
+          Community
+        </Link>
       </div>
     </>
   )
