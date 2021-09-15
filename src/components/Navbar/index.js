@@ -23,6 +23,10 @@ const Navbar = () => {
     setCollapsed(!collapsed)
   }
 
+  const onClickEnterApp = () => {
+    window.location.href = "https://app.zombies.network"
+  }
+
   return (
     <>
       <div className="navbar flex">
@@ -100,7 +104,9 @@ const Navbar = () => {
             >
               Community
             </Link>
-            <div className="navbar-buttons-enterapp">ENTER APP</div>
+            <div className="navbar-buttons-enterapp" onClick={onClickEnterApp}>
+              ENTER APP
+            </div>
             <div className="navbar-buttons-collapse" onClick={onClickCollapse}>
               <FontAwesomeIcon icon={faBars} />
             </div>

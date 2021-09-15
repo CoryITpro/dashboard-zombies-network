@@ -1,5 +1,6 @@
 import "./style.scss"
 
+import { Link } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCopy } from "@fortawesome/free-solid-svg-icons"
 import { CAPS } from "configurations"
@@ -27,8 +28,18 @@ const Hero = ({ percentage = 75.2 }) => (
           />
           <FontAwesomeIcon icon={faCopy} />
           <div className="hero-contract-buttons flex">
-            <button>BUY ZOMB</button>
-            <button>DOCUMENTATION</button>
+            <Link
+              to={{ pathname: "https://www.pancakeswap.finance" }}
+              target="_blank"
+            >
+              BUY ZOMB
+            </Link>
+            <Link
+              to={{ pathname: "https://docs.zombies.network" }}
+              target="_blank"
+            >
+              DOCUMENTATION
+            </Link>
           </div>
         </div>
       </div>
