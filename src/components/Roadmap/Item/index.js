@@ -53,7 +53,9 @@ const generateItem = (index, content) => {
 }
 
 const RoadmapItem = ({ index, content }) => (
-  <div className="roadmap-item flex">{generateItem(index, content)}</div>
+  <div key={index} className="roadmap-item flex">
+    {generateItem(index, content)}
+  </div>
 )
 
 export default RoadmapItem
