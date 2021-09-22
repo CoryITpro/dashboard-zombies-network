@@ -26,7 +26,7 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons"
 
-export const BACKGROUNDS = {
+const BACKGROUNDS = {
   HeroImages: {
     background: HERO_BG,
   },
@@ -46,7 +46,7 @@ export const BACKGROUNDS = {
   },
 }
 
-export const TombContents = [
+const TombContents = [
   {
     title: "Owned",
     content:
@@ -64,7 +64,7 @@ export const TombContents = [
   },
 ]
 
-export const SubTitles = {
+const SubTitles = {
   WhyZombies: {
     title: "WHAT IS",
     subTitle: "Zombie Network",
@@ -101,7 +101,7 @@ export const SubTitles = {
   },
 }
 
-export const FeatureItems = [
+const FeatureItems = [
   {
     image: FARMING,
     title: "Farming",
@@ -128,7 +128,7 @@ export const FeatureItems = [
   },
 ]
 
-export const FAQItems = [
+const FAQItems = [
   {
     question: "Why The Total Supply is Increasing?",
     answer:
@@ -146,7 +146,7 @@ export const FAQItems = [
   },
 ]
 
-export const SocialCommunities = [
+const SocialCommunities = [
   {
     icon: faYoutube,
     link: "https://www.youtube.com",
@@ -181,7 +181,7 @@ export const SocialCommunities = [
   },
 ]
 
-export const PHASES = [
+const PHASES = [
   [
     PHASE_1,
     {

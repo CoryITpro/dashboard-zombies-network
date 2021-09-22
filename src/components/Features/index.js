@@ -1,18 +1,9 @@
 import "./style.scss"
 
-import {
-  BACKGROUNDS,
-  TombContents,
-  SubTitles,
-  FeatureItems,
-} from "constants/index.js"
-
-const { FeaturesImages } = BACKGROUNDS
-
-const generateTombs = () =>
+const generateTombs = (FeaturesImages, TombContents) =>
   TombContents.map((item, index) => (
     <div key={index} className="features-howtoplay-tomb flex flex-column">
-      <img src={FeaturesImages.background} alt="step" />
+      {/* <img src={FeaturesImages.background} alt="step" /> */}
       <div className="features-howtoplay-tomb-texts flex flex-column">
         <div className="features-howtoplay-tomb-texts-title">{item.title}</div>
         <div className="features-howtoplay-tomb-texts-comment">
@@ -22,7 +13,7 @@ const generateTombs = () =>
     </div>
   ))
 
-const generateFeatureItems = () =>
+const generateFeatureItems = (FeatureItems) =>
   FeatureItems.map((item, index) => (
     <div
       key={index}
@@ -38,14 +29,21 @@ const generateFeatureItems = () =>
     </div>
   ))
 
-const Features = () => (
+const Features = ({
+  FeaturesImages,
+  TombContents,
+  SubTitles,
+  FeatureItems,
+}) => (
   <>
     <div className="features flex flex-column">
       <div className="subtitle flex flex-column">
         {SubTitles.HowToPlay.title}
         <span>{SubTitles.HowToPlay.subTitle}</span>
       </div>
-      <div className="features-howtoplay flex">{generateTombs()}</div>
+      <div className="features-howtoplay flex">
+        {generateTombs(FeaturesImages, TombContents)}
+      </div>
     </div>
     <div className="playtoearn flex flex-column">
       <div className="subtitle flex flex-column">
@@ -53,7 +51,9 @@ const Features = () => (
         <span>{SubTitles.Features.subTitle}</span>
       </div>
       <div className="playtoearn-comment">{SubTitles.Features.subHeading}</div>
-      <div className="playtoearn-features flex">{generateFeatureItems()}</div>
+      <div className="playtoearn-features flex">
+        {generateFeatureItems(FeatureItems)}
+      </div>
     </div>
   </>
 )

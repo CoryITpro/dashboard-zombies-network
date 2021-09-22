@@ -5,11 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCopy } from "@fortawesome/free-solid-svg-icons"
 import { CAPS } from "configurations"
 
-import { BACKGROUNDS } from "constants/index.js"
-
-const { HeroImages } = BACKGROUNDS
-
-const Hero = ({ percentage = 75.2 }) => (
+const Hero = ({ HeroImages, percentage = 75.2 }) => (
   <>
     <div className="hero flex flex-column">
       <div className="hero-title flex flex-column">

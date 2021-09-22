@@ -1,18 +1,15 @@
 import "./style.scss"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { BACKGROUNDS, SubTitles, SocialCommunities } from "constants/index"
 
-const { ContactImages } = BACKGROUNDS
-
-const generateSocials = () =>
+const generateSocials = (SocialCommunities) =>
   SocialCommunities.map((item, index) => (
     <a key={index} href={item.link} target="_blank" className="flex">
       <FontAwesomeIcon icon={item.icon} />
     </a>
   ))
 
-const Contact = () => (
+const Contact = ({ ContactImages, SubTitles, SocialCommunities }) => (
   <>
     <div className="contact flex">
       <div className="contact-image">
@@ -21,6 +18,7 @@ const Contact = () => (
       <div className="contact-wrapper flex flex-column">
         <div className="subtitle flex flex-column">
           {SubTitles.Contact.title}
+          {SubTitles.kim + "123"}
           <span>{SubTitles.Contact.subTitle}</span>
         </div>
         <div className="contact-comment">{SubTitles.Contact.subHeading}</div>
@@ -30,7 +28,7 @@ const Contact = () => (
         </div>
       </div>
     </div>
-    <div className="socials flex">{generateSocials()}</div>
+    <div className="socials flex">{generateSocials(SocialCommunities)}</div>
   </>
 )
 

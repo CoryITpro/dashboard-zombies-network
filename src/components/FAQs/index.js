@@ -1,11 +1,10 @@
 import "./style.scss"
 
 import { useState } from "react"
-import { SubTitles, FAQItems } from "constants/index.js"
 
 import FAQItem from "./Item"
 
-const generateFAQs = (selected, setSelected) =>
+const generateFAQs = (selected, setSelected, FAQItems) =>
   FAQItems.map((item, index) => (
     <FAQItem
       key={index}
@@ -17,7 +16,7 @@ const generateFAQs = (selected, setSelected) =>
     />
   ))
 
-const FAQs = () => {
+const FAQs = ({ SubTitles, FAQItems }) => {
   const [selected, setSelected] = useState(0)
 
   return (
@@ -28,7 +27,7 @@ const FAQs = () => {
       </div>
       <div className="faqs-comment">{SubTitles.FAQs.subHeading}</div>
       <div className="faqs-items flex flex-column">
-        {generateFAQs(selected, setSelected)}
+        {generateFAQs(selected, setSelected, FAQItems)}
       </div>
     </div>
   )

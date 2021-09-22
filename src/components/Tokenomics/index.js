@@ -1,10 +1,6 @@
 import "./style.scss"
 
-import { BACKGROUNDS, SubTitles } from "constants/index.js"
-
-const { TokenomicsImages } = BACKGROUNDS
-
-const Tokenomics = () => (
+const Tokenomics = ({ TokenomicsImages, SubTitles }) => (
   <div className="tokenomics flex flex-column">
     <div className="subtitle flex flex-column">
       {SubTitles.Tokenomics.title}

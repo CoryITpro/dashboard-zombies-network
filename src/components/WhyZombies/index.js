@@ -1,11 +1,8 @@
 import "./style.scss"
 
 import { SECTIONS } from "configurations"
-import { SubTitles, BACKGROUNDS } from "constants/index.js"
 
-const { WhyZombiesImages } = BACKGROUNDS
-
-const WhyZombies = () => (
+const WhyZombies = ({ WhyZombiesImages, SubTitles }) => (
   <section className="whyzombies flex flex-column">
     <div className="whyzombies-gradient-bg"></div>
     <img src={WhyZombiesImages.background} alt="background" />
