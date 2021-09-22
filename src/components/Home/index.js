@@ -66,15 +66,14 @@ const Home = () => {
       subTitle: "",
     },
     FAQs: {
-      title: "ANY QUESTIONS",
-      subTitle: "Frequently Asked Questions",
-      subHeading: "If you have any question related to ZOMBIES check our FAQs",
+      title: "",
+      subTitle: "",
+      subHeading: "",
     },
     Contact: {
-      title: "GET IN TOUCH",
-      subTitle: "Join Our Community",
-      subHeading:
-        "Join our ZOMB Family  to get the latest announcements and stay up to date.",
+      title: "",
+      subTitle: "",
+      subHeading: "",
     },
   })
   const [BACKGROUNDS, setBACKGROUNDS] = useState({
@@ -134,20 +133,38 @@ const Home = () => {
   ])
   const [FAQItems, setFAQItems] = useState([
     {
-      question: "Why The Total Supply is Increasing?",
-      answer:
-        "First And Foremost, We Are Timelocked, So New Tokens Cannot Be Minted. All Tokens Originating From Wallet 0x00000000.. Are Obtained As A Prize When You Defeat A Monster. The Second Point Is That, As Previously Said, The Total Quantity Of Tokens In Fight Monster Is 140 Million. Tokens Are Distributed At Initial: 570 Million Tokens. 570 Million Tokens + 140 Million Tokens = 710 Million Tokens. So What Happens If This Quantity Of Tokens Is Exceeded? We Have A Very Clear Plan For This; So Far, More Than 20,000 NFTs Have Been Sold, Resulting In A Total Of 260 Million Tokens Gathered From The Community. This Tokens Will Continue To Be Used For Project Development (Fight Monsters, Bosses, Training, Farming, …) Our Max Total Supply Is 1 Billion.",
+      question: "",
+      answer:"",
     },
     {
-      question: "Why The assets Of Zombies Game is similar to others?",
-      answer:
-        "First And Foremost, We Are Timelocked, So New Tokens Cannot Be Minted. All Tokens Originating From Wallet 0x00000000.. Are Obtained As A Prize When You Defeat A Monster. The Second Point Is That, As Previously Said, The Total Quantity Of Tokens In Fight Monster Is 140 Million. Tokens Are Distributed At Initial: 570 Million Tokens. 570 Million Tokens + 140 Million Tokens = 710 Million Tokens. So What Happens If This Quantity Of Tokens Is Exceeded? We Have A Very Clear Plan For This; So Far, More Than 20,000 NFTs Have Been Sold, Resulting In A Total Of 260 Million Tokens Gathered From The Community. This Tokens Will Continue To Be Used For Project Development (Fight Monsters, Bosses, Training, Farming, …) Our Max Total Supply Is 1 Billion.",
+      question: "",
+      answer:"",
     },
     {
-      question: "Dev are Doxxing or Not?",
-      answer:
-        "First And Foremost, We Are Timelocked, So New Tokens Cannot Be Minted. All Tokens Originating From Wallet 0x00000000.. Are Obtained As A Prize When You Defeat A Monster. The Second Point Is That, As Previously Said, The Total Quantity Of Tokens In Fight Monster Is 140 Million. Tokens Are Distributed At Initial: 570 Million Tokens. 570 Million Tokens + 140 Million Tokens = 710 Million Tokens. So What Happens If This Quantity Of Tokens Is Exceeded? We Have A Very Clear Plan For This; So Far, More Than 20,000 NFTs Have Been Sold, Resulting In A Total Of 260 Million Tokens Gathered From The Community. This Tokens Will Continue To Be Used For Project Development (Fight Monsters, Bosses, Training, Farming, …) Our Max Total Supply Is 1 Billion.",
+      question: "",
+      answer:"",
     },
+    {
+      question: "",
+      answer:"",
+    },
+    {
+      question: "",
+      answer:"",
+    },
+    {
+      question: "",
+      answer:"",
+    },
+    {
+      question: "",
+      answer:"",
+    },
+    {
+      question: "",
+      answer:"",
+    },
+    
   ])
   const [SocialCommunities, setSocialCommunities] = useState([
     {
@@ -189,8 +206,8 @@ const Home = () => {
       {
         title: "Phase 1",
         content: [
-          { title: "Graphic Designs Characters & Marketplace", status: true },
-          { title: "Launch Social + Website", status: true },
+          { title: "Graphic Designs Characters & Marketplace", status: false },
+          { title: "Launch Social + Website", status: false },
           { title: "Audit Contract", status: false },
           { title: "Marketing / Pre-Sale On UniCrypt", status: false },
           { title: "Public Launch On PancakeSwap", status: false },
@@ -249,7 +266,12 @@ const Home = () => {
       prev.Features.subHeading = gObj["tc_subheading"]
       prev.Tokenomics.title = gObj["to_title"]
       prev.Tokenomics.subTitle = gObj["to_subtitle"]
-
+      prev.Contact.title = gObj["co_title"]
+      prev.Contact.subTitle = gObj["co_subtitle"]
+      prev.Contact.subHeading = gObj["co_heading"]
+      prev.FAQs.title = gObj["faq_title"]
+      prev.FAQs.subTitle = gObj["faq_subtitle"]
+      prev.FAQs.subHeading = gObj["faq_heading"]
       return prev
     })
     setTombContents((prev) => {
@@ -269,7 +291,45 @@ const Home = () => {
       prev[3].content = gObj["pte_item_content4"]
       return prev
     })
+    setPHASES((prev) => {
+      for (let i=0; i<8; i++) {
+        if (parseInt(gObj['phase1']) > i)
+          prev[0][1]['content'][i].status = true
+        else
+          prev[0][1]['content'][i].status = false
+      }
+      for (let i=0; i<8; i++) {
+        if (parseInt(gObj['phase2']) > i)
+          prev[1][1]['content'][i].status = true
+        else
+          prev[1][1]['content'][i].status = false
+      }
+      for (let i=0; i<5; i++) {
+        if (parseInt(gObj['phase3']) > i)
+          prev[2][1]['content'][i].status = true
+        else
+          prev[2][1]['content'][i].status = false
+      }
+      return prev
+    })
     setPresale(gObj.presale)
+    setFAQItems((prev) => {
+      for (let i=1;i<=8;i++) {
+        if (gObj['faq_question' + i].length * gObj['faq_answer' + i].length) {
+          console.log(gObj['faq_question' + i].length)
+          prev[i-1]['answer'] = gObj['faq_answer' + i]
+          prev[i-1]['question'] = gObj['faq_question' + i]
+        }
+      }
+      prev = prev.filter(function(value) {
+        if (value.question && value.answer)
+          return value.question.length * value.answer.length
+        else
+          return false
+      })
+      console.log(prev)
+      return prev
+    })
   }, [])
 
   return (
@@ -295,7 +355,7 @@ const Home = () => {
       <Contact
         SocialCommunities={SocialCommunities}
         SubTitles={subTitles}
-        ContactImages={BACKGROUNDS}
+        ContactImages={BACKGROUNDS["ContactImages"]}
       />
       <Footer />
     </>

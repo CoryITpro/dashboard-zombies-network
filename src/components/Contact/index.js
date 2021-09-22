@@ -18,7 +18,6 @@ const Contact = ({ ContactImages, SubTitles, SocialCommunities }) => (
       <div className="contact-wrapper flex flex-column">
         <div className="subtitle flex flex-column">
           {SubTitles.Contact.title}
-          {SubTitles.kim + "123"}
           <span>{SubTitles.Contact.subTitle}</span>
         </div>
         <div className="contact-comment">{SubTitles.Contact.subHeading}</div>

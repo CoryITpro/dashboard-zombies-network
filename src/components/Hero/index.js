@@ -14,19 +14,26 @@ const Hero = ({ HeroImages, percentage = 75.2, presale }) => {
 
   useEffect(() => {
     setTimeout(intervalFunc, 1000)
-  }, [d, h, m, s])
+  }, [d, h, m, s, presale])
 
   const intervalFunc = () => {
     const diff = Math.floor(
       new Date(presale).getTime() / 1000 - Date.now() / 1000
     )
-    setD(Math.floor(diff / (3600 * 24)))
-    let hs = Math.floor((diff % (3600 * 24)) / 3600)
-    setH(hs < 10 ? "0" + hs : hs)
-    let ms = Math.floor((diff % 3600) / 60)
-    setM(ms < 10 ? "0" + ms : ms)
-    let ss = Math.floor(diff % 60)
-    setS(ss < 10 ? "0" + ss : ss)
+    if (diff > 0) {
+      setD(Math.floor(diff / (3600 * 24)))
+      let hs = Math.floor((diff % (3600 * 24)) / 3600)
+      setH(hs < 10 ? "0" + hs : hs)
+      let ms = Math.floor((diff % 3600) / 60)
+      setM(ms < 10 ? "0" + ms : ms)
+      let ss = Math.floor(diff % 60)
+      setS(ss < 10 ? "0" + ss : ss)
+    } else {
+      setD("00")
+      setH("00")
+      setM("00")
+      setS("00")
+    }
   }
   return (
     <>
