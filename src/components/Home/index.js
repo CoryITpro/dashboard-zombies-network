@@ -269,72 +269,84 @@ const Home = () => {
     })
 
     setSubTitles((prev) => {
-      prev.WhyZombies.title = gObj["w_title"]
-      prev.WhyZombies.subTitle = gObj["w_subtitle"]
-      prev.WhyZombies.subHeading = gObj["w_subheading"]
-      prev.WhyZombies.subContent = gObj["w_subcontent"]
-      prev.HowToPlay.title = gObj["ht_title"]
-      prev.HowToPlay.subTitle = gObj["ht_subtitle"]
-      prev.Features.title = gObj["tc_title"]
-      prev.Features.subTitle = gObj["tc_subtitle"]
-      prev.Features.subHeading = gObj["tc_subheading"]
-      prev.Tokenomics.title = gObj["to_title"]
-      prev.Tokenomics.subTitle = gObj["to_subtitle"]
-      prev.Contact.title = gObj["co_title"]
-      prev.Contact.subTitle = gObj["co_subtitle"]
-      prev.Contact.subHeading = gObj["co_heading"]
-      prev.FAQs.title = gObj["faq_title"]
-      prev.FAQs.subTitle = gObj["faq_subtitle"]
-      prev.FAQs.subHeading = gObj["faq_heading"]
+      if ("w_title" in gObj) prev.WhyZombies.title = gObj["w_title"]
+      if ("w_subtitle" in gObj) prev.WhyZombies.subTitle = gObj["w_subtitle"]
+      if ("w_subheading" in gObj)
+        prev.WhyZombies.subHeading = gObj["w_subheading"]
+      if ("w_subcontent" in gObj)
+        prev.WhyZombies.subContent = gObj["w_subcontent"]
+      if ("ht_title" in gObj) prev.HowToPlay.title = gObj["ht_title"]
+      if ("ht_subtitle" in gObj) prev.HowToPlay.subTitle = gObj["ht_subtitle"]
+      if ("tc_title" in gObj) prev.Features.title = gObj["tc_title"]
+      if ("tc_subtitle" in gObj) prev.Features.subTitle = gObj["tc_subtitle"]
+      if ("tc_subheading" in gObj)
+        prev.Features.subHeading = gObj["tc_subheading"]
+      if ("to_title" in gObj) prev.Tokenomics.title = gObj["to_title"]
+      if ("to_subtitle" in gObj) prev.Tokenomics.subTitle = gObj["to_subtitle"]
+      if ("co_title" in gObj) prev.Contact.title = gObj["co_title"]
+      if ("co_subtitle" in gObj) prev.Contact.subTitle = gObj["co_subtitle"]
+      if ("co_heading" in gObj) prev.Contact.subHeading = gObj["co_heading"]
+      if ("faq_title" in gObj) prev.FAQs.title = gObj["faq_title"]
+      if ("faq_subtitle" in gObj) prev.FAQs.subTitle = gObj["faq_subtitle"]
+      if ("faq_heading" in gObj) prev.FAQs.subHeading = gObj["faq_heading"]
       return prev
     })
     setTombContents((prev) => {
-      prev[0].content = gObj["tc_owned"]
-      prev[1].content = gObj["tc_play"]
-      prev[2].content = gObj["tc_repeat"]
+      if ("tc_owned" in gObj) prev[0].content = gObj["tc_owned"]
+      if ("tc_play" in gObj) prev[1].content = gObj["tc_play"]
+      if ("tc_repeat" in gObj) prev[2].content = gObj["tc_repeat"]
       return prev
     })
     setFeatureItems((prev) => {
-      prev[0].title = gObj["pte_item_title1"]
-      prev[0].content = gObj["pte_item_content1"]
-      prev[1].title = gObj["pte_item_title2"]
-      prev[1].content = gObj["pte_item_content2"]
-      prev[2].title = gObj["pte_item_title3"]
-      prev[2].content = gObj["pte_item_content3"]
-      prev[3].title = gObj["pte_item_title4"]
-      prev[3].content = gObj["pte_item_content4"]
+      if ("pte_item_title1" in gObj) prev[0].title = gObj["pte_item_title1"]
+      if ("pte_item_content1" in gObj)
+        prev[0].content = gObj["pte_item_content1"]
+      if ("pte_item_title2" in gObj) prev[1].title = gObj["pte_item_title2"]
+      if ("pte_item_content2" in gObj)
+        prev[1].content = gObj["pte_item_content2"]
+      if ("pte_item_title3" in gObj) prev[2].title = gObj["pte_item_title3"]
+      if ("pte_item_content3" in gObj)
+        prev[2].content = gObj["pte_item_content3"]
+      if ("pte_item_title4" in gObj) prev[3].title = gObj["pte_item_title4"]
+      if ("pte_item_content4" in gObj)
+        prev[3].content = gObj["pte_item_content4"]
       return prev
     })
     setPHASES((prev) => {
-      for (let i = 0; i < 8; i++) {
-        if (parseInt(gObj["phase1"]) > i) prev[0][1]["content"][i].status = true
-        else prev[0][1]["content"][i].status = false
-      }
-      for (let i = 0; i < 8; i++) {
-        if (parseInt(gObj["phase2"]) > i) prev[1][1]["content"][i].status = true
-        else prev[1][1]["content"][i].status = false
-      }
-      for (let i = 0; i < 5; i++) {
-        if (parseInt(gObj["phase3"]) > i) prev[2][1]["content"][i].status = true
-        else prev[2][1]["content"][i].status = false
-      }
+      if ("phase1" in gObj)
+        for (let i = 0; i < 8; i++) {
+          if (parseInt(gObj["phase1"]) > i)
+            prev[0][1]["content"][i].status = true
+          else prev[0][1]["content"][i].status = false
+        }
+      if ("phase2" in gObj)
+        for (let i = 0; i < 8; i++) {
+          if (parseInt(gObj["phase2"]) > i)
+            prev[1][1]["content"][i].status = true
+          else prev[1][1]["content"][i].status = false
+        }
+      if ("phase3" in gObj)
+        for (let i = 0; i < 5; i++) {
+          if (parseInt(gObj["phase3"]) > i)
+            prev[2][1]["content"][i].status = true
+          else prev[2][1]["content"][i].status = false
+        }
       return prev
     })
-    setPresale(gObj.presale)
+    if ("presale" in gObj) setPresale(gObj.presale)
     setFAQItems((prev) => {
       for (let i = 1; i <= 8; i++) {
-        if (gObj["faq_question" + i].length * gObj["faq_answer" + i].length) {
-          console.log(gObj["faq_question" + i].length)
-          prev[i - 1]["answer"] = gObj["faq_answer" + i]
-          prev[i - 1]["question"] = gObj["faq_question" + i]
-        }
+        if ("faq_question" + i in gObj && "faq_answer" + i in gObj)
+          if (gObj["faq_question" + i].length * gObj["faq_answer" + i].length) {
+            prev[i - 1]["answer"] = gObj["faq_answer" + i]
+            prev[i - 1]["question"] = gObj["faq_question" + i]
+          }
       }
       prev = prev.filter(function (value) {
         if (value.question && value.answer)
           return value.question.length * value.answer.length
         else return false
       })
-      console.log(prev)
       return prev
     })
   }, [])
