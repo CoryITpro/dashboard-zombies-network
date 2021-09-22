@@ -43,29 +43,27 @@ import { useState, useEffect } from "react"
 
 const Home = () => {
   let gObj
+
+  const [presale, setPresale] = useState(0)
   const [subTitles, setSubTitles] = useState({
     WhyZombies: {
-      title: "WHAT IS",
-      subTitle: "Zombie Network",
-      subHeading:
-        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero, vel pellentesque purus ultrices ut..",
-      subContent:
-        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero, vel pellentesque purus ultrices ut. In quis leo id massa pulvinar euismod cursus non justo. Sed sagittis et urna non efficitur. Nulla nec lacus tincidunt, rutrum arcu in, euismod diam. Donec neque tellus, congue sed velit sed, scelerisque scelerisque urna. Praesent mi sem, tincidunt eget facilisis in, pharetra et sapien.",
+      title: "",
+      subTitle: "",
+      subHeading: "",
+      subContent: "",
     },
     HowToPlay: {
-      title: "LEARN MORE",
-      subTitle: "How To Play",
+      title: "",
+      subTitle: "",
     },
     Features: {
-      title: "PLAY TO EARN",
-      subTitle:
-        "The First Ecosystem To Combine The Greatest Aspects Of Gaming And Digital Collectibles",
-      subHeading:
-        "Zombies is inspired by Pokemon Story, our mission is to build a comprehensive platform of digital monsters that will enable millions of individuals to participate in the NFT and blockchain-based gaming world in a simple, creative, and enjoyable way.",
+      title: "",
+      subTitle: "",
+      subHeading: "",
     },
     Tokenomics: {
-      title: "BENEFITS OF",
-      subTitle: "ZOMB Tokenomics",
+      title: "",
+      subTitle: "",
     },
     FAQs: {
       title: "ANY QUESTIONS",
@@ -101,44 +99,37 @@ const Home = () => {
   const [TombContents, setTombContents] = useState([
     {
       title: "Owned",
-      content:
-        "To participate in Zombies, you must have at least one ZOMB or items. You can own in a variety of methods, including purchasing on the NFT marketplace, purchasing eggs, or purchasing from other players",
+      content: "",
     },
     {
       title: "Play-To-Earn",
-      content:
-        "Perform daily quests to acquire more ZOMB tokens and get profit while assisting Zombies in escaping the Yaki empire's invasion.",
+      content: "",
     },
     {
       title: "Repeat",
-      content:
-        "Use ZOMB tokens to acquire more ZOMBs with higher level to enhance your profits with Zombies",
+      content: "",
     },
   ])
   const [FeatureItems, setFeatureItems] = useState([
     {
       image: FARMING,
-      title: "Farming",
-      content:
-        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero.",
+      title: "",
+      content: "",
     },
     {
       image: FIGHT_MONSTER,
-      title: "Fight Monsters",
-      content:
-        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero.",
+      title: "",
+      content: "",
     },
     {
       image: TRAINING_BATTLE,
-      title: "Training & Battle",
-      content:
-        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero.",
+      title: "",
+      content: "",
     },
     {
       image: BREEDING_GROW,
-      title: "Breeding & Grow",
-      content:
-        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero.",
+      title: "",
+      content: "",
     },
   ])
   const [FAQItems, setFAQItems] = useState([
@@ -245,20 +236,60 @@ const Home = () => {
     querySnapshot.docs.map((e) => {
       gObj = { ...gObj, [e.id]: e.data().value }
     })
-  })
+
+    setSubTitles((prev) => {
+      prev.WhyZombies.title = gObj["w_title"]
+      prev.WhyZombies.subTitle = gObj["w_subtitle"]
+      prev.WhyZombies.subHeading = gObj["w_subheading"]
+      prev.WhyZombies.subContent = gObj["w_subcontent"]
+      prev.HowToPlay.title = gObj["ht_title"]
+      prev.HowToPlay.subTitle = gObj["ht_subtitle"]
+      prev.Features.title = gObj["tc_title"]
+      prev.Features.subTitle = gObj["tc_subtitle"]
+      prev.Features.subHeading = gObj["tc_subheading"]
+      prev.Tokenomics.title = gObj["to_title"]
+      prev.Tokenomics.subTitle = gObj["to_subtitle"]
+
+      return prev
+    })
+    setTombContents((prev) => {
+      prev[0].content = gObj["tc_owned"]
+      prev[1].content = gObj["tc_play"]
+      prev[2].content = gObj["tc_repeat"]
+      return prev
+    })
+    setFeatureItems((prev) => {
+      prev[0].title = gObj["pte_item_title1"]
+      prev[0].content = gObj["pte_item_content1"]
+      prev[1].title = gObj["pte_item_title2"]
+      prev[1].content = gObj["pte_item_content2"]
+      prev[2].title = gObj["pte_item_title3"]
+      prev[2].content = gObj["pte_item_content3"]
+      prev[3].title = gObj["pte_item_title4"]
+      prev[3].content = gObj["pte_item_content4"]
+      return prev
+    })
+    setPresale(gObj.presale)
+  }, [])
 
   return (
     <>
       <Navbar />
-      <Hero HeroImages={BACKGROUNDS} />
-      <WhyZombies SubTitles={subTitles} WhyZombiesImages={BACKGROUNDS} />
+      <Hero presale={presale} HeroImages={BACKGROUNDS["HeroImages"]} />
+      <WhyZombies
+        SubTitles={subTitles}
+        WhyZombiesImages={BACKGROUNDS["WhyZombiesImages"]}
+      />
       <Features
         SubTitles={subTitles}
-        FeaturesImages={BACKGROUNDS}
+        FeaturesImages={BACKGROUNDS["FeaturesImages"]}
         TombContents={TombContents}
         FeatureItems={FeatureItems}
       />
-      <Tokenomics TokenomicsImages={BACKGROUNDS} SubTitles={subTitles} />
+      <Tokenomics
+        TokenomicsImages={BACKGROUNDS["TokenomicsImages"]}
+        SubTitles={subTitles}
+      />
       <Roadmap PHASES={PHASES} />
       <FAQs FAQItems={FAQItems} SubTitles={subTitles} />
       <Contact

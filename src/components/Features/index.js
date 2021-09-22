@@ -3,7 +3,7 @@ import "./style.scss"
 const generateTombs = (FeaturesImages, TombContents) =>
   TombContents.map((item, index) => (
     <div key={index} className="features-howtoplay-tomb flex flex-column">
-      {/* <img src={FeaturesImages.background} alt="step" /> */}
+      <img src={FeaturesImages.background} alt="step" />
       <div className="features-howtoplay-tomb-texts flex flex-column">
         <div className="features-howtoplay-tomb-texts-title">{item.title}</div>
         <div className="features-howtoplay-tomb-texts-comment">
