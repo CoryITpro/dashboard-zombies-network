@@ -47,33 +47,38 @@ const Home = () => {
   const [presale, setPresale] = useState(0)
   const [subTitles, setSubTitles] = useState({
     WhyZombies: {
-      title: "",
-      subTitle: "",
-      subHeading: "",
-      subContent: "",
+      title: "WHAT IS",
+      subTitle: "Zombie Network",
+      subHeading:
+        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero, vel pellentesque purus ultrices ut..",
+      subContent:
+        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero, vel pellentesque purus ultrices ut. In quis leo id massa pulvinar euismod cursus non justo. Sed sagittis et urna non efficitur. Nulla nec lacus tincidunt, rutrum arcu in, euismod diam. Donec neque tellus, congue sed velit sed, scelerisque scelerisque urna. Praesent mi sem, tincidunt eget facilisis in, pharetra et sapien.",
     },
     HowToPlay: {
-      title: "",
-      subTitle: "",
+      title: "LEARN MORE",
+      subTitle: "How To Play",
     },
     Features: {
-      title: "",
-      subTitle: "",
-      subHeading: "",
+      title: "PLAY TO EARN",
+      subTitle:
+        "The First Ecosystem To Combine The Greatest Aspects Of Gaming And Digital Collectibles",
+      subHeading:
+        "Zombies is inspired by Pokemon Story, our mission is to build a comprehensive platform of digital monsters that will enable millions of individuals to participate in the NFT and blockchain-based gaming world in a simple, creative, and enjoyable way.",
     },
     Tokenomics: {
-      title: "",
-      subTitle: "",
+      title: "BENEFITS OF",
+      subTitle: "ZOMB Tokenomics",
     },
     FAQs: {
-      title: "",
-      subTitle: "",
-      subHeading: "",
+      title: "ANY QUESTIONS",
+      subTitle: "Frequently Asked Questions",
+      subHeading: "If you have any question related to ZOMBIES check our FAQs",
     },
     Contact: {
-      title: "",
-      subTitle: "",
-      subHeading: "",
+      title: "GET IN TOUCH",
+      subTitle: "Join Our Community",
+      subHeading:
+        "Join our ZOMB Family  to get the latest announcements and stay up to date.",
     },
   })
   const [BACKGROUNDS, setBACKGROUNDS] = useState({
@@ -98,73 +103,82 @@ const Home = () => {
   const [TombContents, setTombContents] = useState([
     {
       title: "Owned",
-      content: "",
+      content:
+        "To participate in Zombies, you must have at least one ZOMB or items. You can own in a variety of methods, including purchasing on the NFT marketplace, purchasing eggs, or purchasing from other players",
     },
     {
       title: "Play-To-Earn",
-      content: "",
+      content:
+        "Perform daily quests to acquire more ZOMB tokens and get profit while assisting Zombies in escaping the Yaki empire's invasion.",
     },
     {
       title: "Repeat",
-      content: "",
+      content:
+        "Use ZOMB tokens to acquire more ZOMBs with higher level to enhance your profits with Zombies",
     },
   ])
   const [FeatureItems, setFeatureItems] = useState([
     {
       image: FARMING,
-      title: "",
-      content: "",
+      title: "Farming",
+      content:
+        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero.",
     },
     {
       image: FIGHT_MONSTER,
-      title: "",
-      content: "",
+      title: "Fight Monsters",
+      content:
+        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero.",
     },
     {
       image: TRAINING_BATTLE,
-      title: "",
-      content: "",
+      title: "Training & Battle",
+      content:
+        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero.",
     },
     {
       image: BREEDING_GROW,
-      title: "",
-      content: "",
+      title: "Breeding & Grow",
+      content:
+        "Mauris neque nisi, faucibus non elementum in, convallis et eros. Sed pretium sem libero.",
     },
   ])
   const [FAQItems, setFAQItems] = useState([
     {
-      question: "",
-      answer:"",
+      question: "Why The Total Supply is Increasing?",
+      answer:
+        "First And Foremost, We Are Timelocked, So New Tokens Cannot Be Minted. All Tokens Originating From Wallet 0x00000000.. Are Obtained As A Prize When You Defeat A Monster. The Second Point Is That, As Previously Said, The Total Quantity Of Tokens In Fight Monster Is 140 Million. Tokens Are Distributed At Initial: 570 Million Tokens. 570 Million Tokens + 140 Million Tokens = 710 Million Tokens. So What Happens If This Quantity Of Tokens Is Exceeded? We Have A Very Clear Plan For This; So Far, More Than 20,000 NFTs Have Been Sold, Resulting In A Total Of 260 Million Tokens Gathered From The Community. This Tokens Will Continue To Be Used For Project Development (Fight Monsters, Bosses, Training, Farming, …) Our Max Total Supply Is 1 Billion.",
+    },
+    {
+      question: "Why The assets Of Zombies Game is similar to others?",
+      answer:
+        "First And Foremost, We Are Timelocked, So New Tokens Cannot Be Minted. All Tokens Originating From Wallet 0x00000000.. Are Obtained As A Prize When You Defeat A Monster. The Second Point Is That, As Previously Said, The Total Quantity Of Tokens In Fight Monster Is 140 Million. Tokens Are Distributed At Initial: 570 Million Tokens. 570 Million Tokens + 140 Million Tokens = 710 Million Tokens. So What Happens If This Quantity Of Tokens Is Exceeded? We Have A Very Clear Plan For This; So Far, More Than 20,000 NFTs Have Been Sold, Resulting In A Total Of 260 Million Tokens Gathered From The Community. This Tokens Will Continue To Be Used For Project Development (Fight Monsters, Bosses, Training, Farming, …) Our Max Total Supply Is 1 Billion.",
+    },
+    {
+      question: "Dev are Doxxing or Not?",
+      answer:
+        "First And Foremost, We Are Timelocked, So New Tokens Cannot Be Minted. All Tokens Originating From Wallet 0x00000000.. Are Obtained As A Prize When You Defeat A Monster. The Second Point Is That, As Previously Said, The Total Quantity Of Tokens In Fight Monster Is 140 Million. Tokens Are Distributed At Initial: 570 Million Tokens. 570 Million Tokens + 140 Million Tokens = 710 Million Tokens. So What Happens If This Quantity Of Tokens Is Exceeded? We Have A Very Clear Plan For This; So Far, More Than 20,000 NFTs Have Been Sold, Resulting In A Total Of 260 Million Tokens Gathered From The Community. This Tokens Will Continue To Be Used For Project Development (Fight Monsters, Bosses, Training, Farming, …) Our Max Total Supply Is 1 Billion.",
     },
     {
       question: "",
-      answer:"",
+      answer: "",
     },
     {
       question: "",
-      answer:"",
+      answer: "",
     },
     {
       question: "",
-      answer:"",
+      answer: "",
     },
     {
       question: "",
-      answer:"",
+      answer: "",
     },
     {
       question: "",
-      answer:"",
+      answer: "",
     },
-    {
-      question: "",
-      answer:"",
-    },
-    {
-      question: "",
-      answer:"",
-    },
-    
   ])
   const [SocialCommunities, setSocialCommunities] = useState([
     {
@@ -292,40 +306,33 @@ const Home = () => {
       return prev
     })
     setPHASES((prev) => {
-      for (let i=0; i<8; i++) {
-        if (parseInt(gObj['phase1']) > i)
-          prev[0][1]['content'][i].status = true
-        else
-          prev[0][1]['content'][i].status = false
+      for (let i = 0; i < 8; i++) {
+        if (parseInt(gObj["phase1"]) > i) prev[0][1]["content"][i].status = true
+        else prev[0][1]["content"][i].status = false
       }
-      for (let i=0; i<8; i++) {
-        if (parseInt(gObj['phase2']) > i)
-          prev[1][1]['content'][i].status = true
-        else
-          prev[1][1]['content'][i].status = false
+      for (let i = 0; i < 8; i++) {
+        if (parseInt(gObj["phase2"]) > i) prev[1][1]["content"][i].status = true
+        else prev[1][1]["content"][i].status = false
       }
-      for (let i=0; i<5; i++) {
-        if (parseInt(gObj['phase3']) > i)
-          prev[2][1]['content'][i].status = true
-        else
-          prev[2][1]['content'][i].status = false
+      for (let i = 0; i < 5; i++) {
+        if (parseInt(gObj["phase3"]) > i) prev[2][1]["content"][i].status = true
+        else prev[2][1]["content"][i].status = false
       }
       return prev
     })
     setPresale(gObj.presale)
     setFAQItems((prev) => {
-      for (let i=1;i<=8;i++) {
-        if (gObj['faq_question' + i].length * gObj['faq_answer' + i].length) {
-          console.log(gObj['faq_question' + i].length)
-          prev[i-1]['answer'] = gObj['faq_answer' + i]
-          prev[i-1]['question'] = gObj['faq_question' + i]
+      for (let i = 1; i <= 8; i++) {
+        if (gObj["faq_question" + i].length * gObj["faq_answer" + i].length) {
+          console.log(gObj["faq_question" + i].length)
+          prev[i - 1]["answer"] = gObj["faq_answer" + i]
+          prev[i - 1]["question"] = gObj["faq_question" + i]
         }
       }
-      prev = prev.filter(function(value) {
+      prev = prev.filter(function (value) {
         if (value.question && value.answer)
           return value.question.length * value.answer.length
-        else
-          return false
+        else return false
       })
       console.log(prev)
       return prev
