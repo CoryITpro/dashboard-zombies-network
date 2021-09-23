@@ -4,7 +4,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const generateSocials = (SocialCommunities) =>
   SocialCommunities.map((item, index) => (
-    <a key={index} href={item.link} target="_blank" className="flex">
+    <a
+      key={index}
+      href={item.link}
+      target="_blank"
+      rel="noreferrer"
+      className="flex"
+    >
       <FontAwesomeIcon icon={item.icon} />
     </a>
   ))

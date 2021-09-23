@@ -7,7 +7,7 @@ const FAQItem = ({ index, selected, question, answer, setSelected }) => {
 
   useEffect(() => {
     index === selected ? setChecked(true) : setChecked(false)
-  }, [selected])
+  }, [selected, index])
 
   const onClickHandler = () => {
     setChecked(!checked)

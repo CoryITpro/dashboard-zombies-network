@@ -12,10 +12,6 @@ const Hero = ({ HeroImages, percentage = 75.2, presale }) => {
   const [m, setM] = useState("00")
   const [s, setS] = useState("00")
 
-  useEffect(() => {
-    setTimeout(intervalFunc, 1000)
-  }, [d, h, m, s, presale])
-
   const intervalFunc = () => {
     const diff = Math.floor(
       new Date(presale).getTime() / 1000 - Date.now() / 1000
@@ -35,6 +31,11 @@ const Hero = ({ HeroImages, percentage = 75.2, presale }) => {
       setS("00")
     }
   }
+
+  useEffect(() => {
+    setTimeout(intervalFunc, 1000)
+  }, [d, h, m, s, presale])
+
   return (
     <>
       <div className="hero flex flex-column">

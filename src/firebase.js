@@ -7,7 +7,7 @@ import { getFirestore } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const app = initializeApp({
+initializeApp({
   apiKey: "AIzaSyBrUHgfk7fNUItZuWczjng4Ud_LW-DK_8A",
   authDomain: "localhost",
   projectId: "zombie-bbfbe",

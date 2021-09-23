@@ -1,7 +1,5 @@
 import "./style.scss"
 
-import { SECTIONS } from "configurations"
-
 const WhyZombies = ({ WhyZombiesImages, SubTitles }) => (
   <section className="whyzombies flex flex-column">
     <div className="whyzombies-gradient-bg"></div>
