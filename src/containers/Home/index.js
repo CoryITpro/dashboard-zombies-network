@@ -1,12 +1,25 @@
 import { useEffect } from "react"
 import HomeComponent from "components/Home"
-
-import { useAudio } from "hooks/useAudio"
+import Audio from "../../resources/Sounds/sound.mp3"
 
 const Home = () => {
-  const playing = useAudio()
+  useEffect(() => {
+    document.getElementById("zombieAudioPlayer").play()
+    document
+      .getElementById("zombieAudioPlayer")
+      .addEventListener("ended", () => {
+        document.getElementById("zombieAudioPlayer").play()
+      })
+  })
 
-  return <HomeComponent />
+  return (
+    <>
+      <HomeComponent />
+      <audio id="zombieAudioPlayer">
+        <source src={Audio}></source>
+      </audio>
+    </>
+  )
 }
 
 export default Home
